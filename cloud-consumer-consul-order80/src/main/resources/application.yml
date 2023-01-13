@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: consul-consumer-order
+  cloud:
+    consul:
+      host: 101.43.244.40  #用linux的ip地址（consul在本机就填localhost）
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        #Service check机制，新版本需要
+        heartbeat:
+          enabled: true
