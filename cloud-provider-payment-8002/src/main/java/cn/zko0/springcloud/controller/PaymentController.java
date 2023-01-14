@@ -48,4 +48,9 @@ public class PaymentController {
         }
     }
 
+    @GetMapping(value = "/payment/port")
+    public String getPort(){
+        return port;
+    }
+
 }
