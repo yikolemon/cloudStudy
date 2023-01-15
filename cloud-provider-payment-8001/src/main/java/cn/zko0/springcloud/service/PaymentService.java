@@ -3,6 +3,9 @@ package cn.zko0.springcloud.service;
 import cn.zko0.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -16,4 +19,5 @@ public interface PaymentService {
 
     //改     加上@Param注解，mapper中就可以采用#{}的方式把@Param注解括号内的参数进行引用
     Payment getPaymentById(@Param("id") Long id);
+
 }

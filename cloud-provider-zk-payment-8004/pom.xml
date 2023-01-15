@@ -6,8 +6,8 @@
         <artifactId>CloudStudy</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>cloud-provider-payment-8004</artifactId>
-    <name>cloud-provider-payment-8004</name>
+    <artifactId>cloud-provider-zk-payment-8004</artifactId>
+    <name>cloud-provider-zk-payment-8004</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
