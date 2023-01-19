@@ -15,6 +15,17 @@ spring:
           #username: zko0 用户名
           #password: xxxxxxx token
       label: master   #读取的分支
+  #RabbitMQ相关配置
+  rabbitmq:
+    host: 101.43.244.40  #本机写localhost，服务器的写服务器地址
+    port: 5672   #客户端和RabbitMQ进行通信的端口
+    username: guest #默认也是guest
+    password: guest #默认也是guest
+management:
+  endpoints:  #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
 
 eureka:
   client:

@@ -8,10 +8,10 @@
     </parent>
 
     <groupId>cn.zko0.springcloud</groupId>
-    <artifactId>cloud-config-center-3344</artifactId>
+    <artifactId>cloud-stream-rabbitmq-consumer8802</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloud-config-center-3344</name>
+    <name>cloud-stream-rabbitmq-consumer8802</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -19,18 +19,12 @@
     </properties>
 
     <dependencies>
-        <!--添加消息总线RabbitMQ的支持-->
+        <!--stream rabbit -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
         </dependency>
-
-        <!--config server-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-        <!--eureka client(通过微服务名实现动态路由)-->
+        <!--eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -39,6 +33,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--监控-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
