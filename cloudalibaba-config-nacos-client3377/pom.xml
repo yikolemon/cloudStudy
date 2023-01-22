@@ -8,10 +8,10 @@
     </parent>
 
     <groupId>cn.zko0.springcloud</groupId>
-    <artifactId>cloudalibaba-consumer-nacos-order83</artifactId>
+    <artifactId>cloudalibaba-config-nacos-client3377</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloudalibaba-consumer-nacos-order83</name>
+    <name>cloudalibaba-config-nacos-client3377</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -19,22 +19,20 @@
     </properties>
 
     <dependencies>
+        <!-- nacos config-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
         <!-- openfeign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
         <!--SpringCloud Alibaba nacos-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
-        <dependency>
-            <groupId>cn.zko0.cloud</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

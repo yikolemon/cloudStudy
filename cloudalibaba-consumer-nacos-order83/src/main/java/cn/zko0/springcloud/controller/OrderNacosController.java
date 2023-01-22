@@ -1,5 +1,6 @@
-package cn.zko0.springcloud.config.controller;
+package cn.zko0.springcloud.controller;
 
+import cn.zko0.springcloud.service.PaymentFeignService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,16 +20,18 @@ import javax.annotation.Resource;
 @RestController
 public class OrderNacosController {
 
+//    @Resource
+//    private RestTemplate restTemplate;
+//    //从配置文件里读取serverURL
+//    @Value("${service-url.nacos-user-service}")
+//    private String serverUrl;
     @Resource
-    private RestTemplate restTemplate;
-
-    //从配置文件里读取serverURL
-    @Value("${service-url.nacos-user-service}")
-    private String serverUrl;
+    private PaymentFeignService paymentFeignService;
 
     @GetMapping(value = "/consumer/payment/nacos/{id}")
     public String paymentInfo(@PathVariable("id")Long id){
-        return restTemplate.getForObject(serverUrl+"/payment/nacos/"+id,String.class);
+        String payment = paymentFeignService.getPayment(id);
+        return payment;
+        //return restTemplate.getForObject(serverUrl+"/payment/nacos/"+id,String.class);
     }
-
 }

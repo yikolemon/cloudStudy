@@ -1,3 +1,4 @@
+/*
 package cn.zko0.springcloud.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -13,3 +14,4 @@ public class ApplicationContextConfig {
         return new RestTemplate();
     }
 }
+*/
