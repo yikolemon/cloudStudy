@@ -8,10 +8,10 @@
     </parent>
 
     <groupId>cn.zko0.springcloud</groupId>
-    <artifactId>cloudalibaba-sentinel-service8401</artifactId>
+    <artifactId>cloudalibaba-provider-payment9003</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloudalibaba-sentinel-service8401</name>
+    <name>cloudalibaba-provider-payment9003</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -24,16 +24,12 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!-- SpringCloud ailibaba sentinel-datasource-nacos 持久化需要用到-->
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
-        </dependency>
         <!-- SpringCloud ailibaba sentinel-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
+        <!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
         <dependency>
             <groupId>cn.zko0.cloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
