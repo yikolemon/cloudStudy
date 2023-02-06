@@ -1,7 +1,8 @@
 package cn.zko0.springcloud.dao;
 
-import feign.Param;
+
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.math.BigDecimal;
 

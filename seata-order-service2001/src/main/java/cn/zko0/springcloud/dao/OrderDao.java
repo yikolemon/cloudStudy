@@ -1,8 +1,8 @@
 package cn.zko0.springcloud.dao;
 
 import cn.zko0.springcloud.domain.Order;
-import feign.Param;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface OrderDao {

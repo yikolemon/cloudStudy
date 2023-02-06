@@ -2,6 +2,8 @@ package cn.zko0.springcloud.service;
 
 import cn.zko0.springcloud.dao.OrderDao;
 import cn.zko0.springcloud.domain.Order;
+import io.seata.core.context.RootContext;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,12 @@ public class OderServiceImpl implements OrderService {
     private AccountService accountService;
 
     @Override
+    @GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
     public void create(Order order) {
+        //xid检查
+        String xid = RootContext.getXID();
+        System.out.println("xid_order:" +xid );
+
         //1. 新建订单
         log.info("-------> 开始新建订单");
         orderDao.create(order);
